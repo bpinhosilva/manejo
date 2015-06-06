@@ -1,3 +1,5 @@
+// Main do projeto - Arquivo principal de inicializacoes
+
 var tab = ""; // define que aba sera exibida na pagina
 
 $(document).ready(function() {
@@ -33,8 +35,8 @@ $(document).ready(function() {
     $("main").load("pages/" + tab + ".html");
   }
 
-
-
+  
+  login.init();
 
 
 });
