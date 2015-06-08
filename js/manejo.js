@@ -1,6 +1,8 @@
 // Main do projeto - Arquivo principal de inicializacoes
 
 var tab = ""; // define que aba sera exibida na pagina
+var US = "";
+login.init();
 
 $(document).ready(function() {
   
@@ -15,7 +17,7 @@ $(document).ready(function() {
     //$(".navbar-collapse").collapse('hide');
   });
 
-
+/*
   $("#manejo").click(function() {
     $("#" + tab).parent().toggleClass("active");
     tab = "manejo";
@@ -34,9 +36,8 @@ $(document).ready(function() {
     tab = "manejo";
     $("main").load("pages/" + tab + ".html");
   }
-
+*/
   
-  login.init();
 
 
 });

@@ -6,6 +6,7 @@ var login = (function(){
   var btnLogin = "";
   var btnCadastro = "";
   var formName = "";
+  var userName = "";
 
   var checkLogin = function () {
     //console.log( $(".form-signin input[type=email]").val() );
@@ -26,7 +27,13 @@ var login = (function(){
 
       switch(c0) {
         case 4: // successful login
-          window.location.href = "http://104.236.14.87/ManejoNovo/home.html";
+          US = "BRuno";
+          login.setUserName("Bruno");
+          //window.location.href = "http://104.236.14.87/ManejoNovo/home.html";
+          $("main").load("test.html", function () {
+            alert(US);
+            alert(login.getUserName());
+          });
           break;
       }     
     });
@@ -35,6 +42,7 @@ var login = (function(){
   // public members
   return {
     init: function () {
+      this.userName = "";
       $(".form-signin").submit( function (e) {
         e.preventDefault();
         var btnType = $(document.activeElement).attr('id');
@@ -51,6 +59,12 @@ var login = (function(){
     },
     setFormName: function (name) {
       this.formName = name;
+    },
+    getUserName: function () {
+      return this.userName;
+    },
+    setUserName: function (name) {
+      return this.userName = name;
     },
     setBtnLogin: function (btn) {
       this.btnLogin = btn;
