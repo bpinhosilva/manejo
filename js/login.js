@@ -21,10 +21,10 @@ var login = (function(){
       c1: userLogin,
       c2: userPassword
     }, function (data) {
-      console.log("retorno");
+      console.log("retorno");      
       eval(data); 
       var c0, c1, c2;
-
+      $('#modalLoading').modal('hide');
       switch(c0) {
         case 4: // successful login
           US = "BRuno";
@@ -46,7 +46,7 @@ var login = (function(){
       $(".form-signin").submit( function (e) {
         e.preventDefault();
         var btnType = $(document.activeElement).attr('id');
-        
+        $('#modalLoading').modal('show');
         switch(btnType) {
           // caso login
           case "btnLogin":
